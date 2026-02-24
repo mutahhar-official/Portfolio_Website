@@ -58,9 +58,8 @@ The portfolio showcases my skills, projects, resume, and contact information in 
 ---
 
 ## 🌍 Live Demo
-If deployed on GitHub Pages or Netlify:
 
-🔗 Live Website: [https://your-portfolio-link.com](https://your-portfolio-link.com)
+🔗 Live Website:  https://mutahhar-official.github.io/CodeAlpha_Potfolio_Frontend/
 
 ---
 
