@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutahhar-Official</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  <div class="noise-overlay"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">MMK</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="section hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Available for opportunities</span>
+      </div>
+
+      <div class="hero-photo-wrapper">
+      <div class="photo-ring ring-1"></div>
+      <div class="photo-ring ring-2"></div>
+      <div class="photo-placeholder">
+        <img src="Profile.jpg" alt="Profile-Pic" />
+      </div>
+    </div>
+
+      <div class="hero-text">
+        <p class="hero-greeting">Hi, I'm</p>
+        <h1 class="hero-name">
+          <span class="name-line">Muhammad</span>
+          <span class="name-line accent-text">Mutahhar Khan</span>
+        </h1>
+        <div class="hero-roles">
+          <span class="role-prefix">_</span>
+          <span class="role-text" id="roleText"></span>
+          <span class="role-cursor">|</span>
+        </div><br>
+        <!-- <p class="hero-tagline">Building systems that bridge hardware logic and human experience.</p> -->
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="2">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Design Years Exp.</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Design Projects</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Dev Projects</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="section-header reveal">
+      <!-- <span class="section-tag">// 01</span> -->
+      <h2 class="section-title">About Me</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="about-intro">I'm a <strong>Computer Systems Engineer</strong> with a passion for creating efficient, scalable solutions across software and design disciplines.</p>
+        <p>With a foundation in computer systems engineering, I blend technical precision with creative thinking. My journey spans from writing low-level C/C++ programs to crafting pixel-perfect user interfaces — always driven by curiosity and a commitment to quality.</p>
+        <p>I believe great technology should not only work flawlessly but also look and feel exceptional. This philosophy guides every project I take on, whether it's optimizing algorithms or designing intuitive user experiences.</p>
+        <a href="#contact" class="btn btn-primary" style="margin-top:1.5rem;display:inline-block">Let's Collaborate</a>
+      </div>
+      <div class="about-cards reveal">
+        <div class="info-card">
+          <div class="info-card-icon">🎓</div>
+          <div>
+            <h4>Education</h4>
+            <p>Computer Systems Engineering - NEDUET</p>
+            <span class="tag">Bachelor's Degree</span>
+          </div>
+        </div>
+        <!-- <div class="info-card">
+          <div class="info-card-icon">💼</div>
+          <div>
+            <h4>Total Experience</h4>
+            <p>Systems Engineering &amp; Design</p>
+            <span class="tag">2+ Years</span>
+          </div>
+        </div> -->
+        <div class="info-card">
+          <div class="info-card-icon">🎨</div>
+          <div>
+            <h4>Graphic Design</h4>
+            <p>Visual Identity - Certified by Govt. of Pakistan</p>
+            <span class="tag">2 Years · 15+ Projects</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">🖥️</div>
+          <div>
+            <h4>Frontend Dev</h4>
+            <p>Responsive Web Applications</p>
+            <span class="tag">1.5 Year</span>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-card-icon">⚙️</div>
+          <div>
+            <h4>Programming</h4>
+            <p>C/C++ | Python | SQL</p>
+            <span class="tag">6+ Months</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section skills" id="skills">
+  <div class="section-header reveal">
+    <h2 class="section-title">Skills &amp; Expertise</h2>
+  </div>
+
+  <div class="marquee-wrapper reveal">
+  <div class="marquee-label">Tools & Technologies</div>
+  <div class="marquee-track">
+    <div class="marquee-inner">
+      <div class="marquee-content">
+        <span>C++</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe Premiere Pro</span>
+        <span>Canva</span>
+        <span>InShot</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>C++</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Adobe Illustrator</span>
+        <span>Adobe Photoshop</span>
+        <span>Adobe Premiere Pro</span>
+        <span>Canva</span>
+        <span>InShot</span>
+        <span>VS Code</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+  <div class="skills-grid">
+
+    <div class="skill-card reveal"> <!-- C/C++ --> 
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>C / C++ Developer</h3>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+      <div class="skill-pct">80%</div>
+      <div class="skill-tags"><span>C</span><span>C++</span><span>Algorithms</span></div>
+    </div>
+
+    <div class="skill-card reveal"> <!-- Frontend -->
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </div>
+      <h3>Frontend Developer</h3>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+      <div class="skill-pct">80%</div>
+      <div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+    </div>
+
+    <div class="skill-card reveal"> <!-- Graphic Design -->
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+      </div>
+      <h3>Graphic Designer</h3><p>- Certified by Govt. of Pakistan.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+      <div class="skill-pct">90%</div>
+      <div class="skill-tags"><span>Adobe Illustrator</span><span>Adobe Photoshop</span><span>Canva</span></div>
+    </div>
+
+    <div class="skill-card reveal"> <!-- Video Editing -->
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      </div>
+      <h3>Video Editor</h3><p>- Certified by Digiskills, Govt. of Pakistan.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+      <div class="skill-pct">75%</div>
+      <div class="skill-tags"><span>Adobe PremierePro</span><span>Inshot</span></div>
+    </div>
+
+    <div class="skill-card reveal"> <!-- Python -->
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <h3>Python Developer</h3><p>- Certified by NUST University, Islamabad.</p>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div>
+      <div class="skill-pct">60%</div>
+      <div class="skill-tags"><span>Python</span><span>Scripts</span></div>
+    </div>
+
+    <div class="skill-card reveal"> <!-- SQL -->
+      <div class="skill-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+       <h3>SQL Programmer</h3>
+      <div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div>
+      <div class="skill-pct">60%</div>
+      <div class="skill-tags"><span>SQL</span><span>Data Handling</span></div>
+    </div>
+  </div>
+
+</section>
+
+  <!-- PROJECTS -->
+<section class="section projects" id="projects">
+  <div class="section-header reveal">
+    <h2 class="section-title">My Projects</h2>
+  </div>
+  <div class="projects-filter reveal">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="programming">Programming</button>
+  </div>
+  <div class="projects-grid" id="projectsGrid">
+
+    <!-- DESIGNING -->
+    <!-- <div class="project-card reveal" data-category="design">
+      <div class="project-img design-thumb">
+        <svg viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="70" height="50" rx="4" stroke="var(--accent)" stroke-width="1.5"/><circle cx="25" cy="25" r="8" stroke="var(--accent)" stroke-width="1.5"/><path d="M10 50l20-18 12 12 10-14 18 20" stroke="var(--accent)" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge design">Design</div>
+        <h3>Brand Identity Design</h3>
+        <p>Complete visual identity system including logo, color palette, typography, and brand guidelines for a tech startup.</p>
+        <div class="project-tech"><span>Illustrator</span><span>Photoshop</span><span>Figma</span></div>
+        <a href="#" class="project-link">View Project →</a>
+      </div>
+    </div> -->
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-img frontend-thumb">
+        <a href="https://mutahhar-official.github.io/CodeAlpha_Calculator_Frontend/" target="_blank">
+          <img src="1. Calculator.png" alt="Calculator Project" style="width:100%;height:100%;object-fit:cover;">
+        </a>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge frontend">Frontend</div>
+        <h3>Arithmetic Calculator</h3>
+        <p>Fully responsive arithmetic calculator with interactive buttons and valid answers.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="https://mutahhar-official.github.io/CodeAlpha_Calculator_Frontend/" class="project-link" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-img frontend-thumb">
+        <a href="https://mutahhar-official.github.io/Travel_-Agency_Frontend/" target="_blank">
+        <img src="3. Travel Agency.png" alt="Music Player Project">
+      </a>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge frontend">Frontend</div>
+        <h3>Travel Agency Website</h3>
+        <p>Fully responsive Travel Agency Website displaying Places to visit, Packages and Contact.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="https://mutahhar-official.github.io/Travel_-Agency_Frontend/" class="project-link" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-img frontend-thumb">
+        <a href="https://mutahhar-official.github.io/Bounce_Catch_Game/" target="_blank">
+        <img src="4. BounceCatch.png" alt="Music Player Project">
+      </a>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge frontend">Frontend</div>
+        <h3>Bounce Catch Game</h3>
+        <p>A retro-neon arcade game built with pure HTML, CSS, and JavaScript — catch the bouncing ball with your slider before it hits the ground. Survive all 3 laps and post the highest score you can.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="https://mutahhar-official.github.io/Bounce_Catch_Game/" class="project-link" target="_blank">View Project →</a>
+      </div>
+    </div> 
+
+    <div class="project-card reveal" data-category="frontend">
+      <div class="project-img frontend-thumb">
+        <a href="https://mutahhar-official.github.io/PacMan-Game/" target="_blank">
+        <img src="6. PacMan.png" alt="Music Player Project">
+      </a>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge frontend">Frontend</div>
+        <h3>Pac-Man Game</h3>
+        <p>A fully functional PAC-MAN clone built from scratch using HTML, CSS and JavaScript.</p>
+        <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="https://mutahhar-official.github.io/PacMan-Game/" class="project-link" target="_blank">View Project →</a>
+      </div>
+    </div>
+
+    <!-- PROGRAMMING -->
+    <div class="project-card reveal" data-category="programming">
+      <div class="project-img programming-thumb">
+        <a href="https://www.linkedin.com/posts/muhammad-mutahhar-khan-562070378_%F0%9D%90%8F%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A3%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AD-%F0%9D%90%92%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%9C%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%9E-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%AF%F0%9D%90%9E-activity-7409249395856281601-_-20?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF1E-hoBqhdV_WFdT117IOENh-ECgNig0Rs" target="_blank">
+        <img src="5. Inventory Mang Sys.jpg" alt="Music Player Project">
+      </a>
+        <svg viewBox="0 0 80 60" fill="none"><rect x="5" y="5" width="70" height="50" rx="4" fill="none" stroke="var(--accent3)" stroke-width="1.5"/><text x="12" y="24" font-size="7.5" fill="var(--accent3)" font-family="monospace">def sort(arr):</text><text x="12" y="35" font-size="7.5" fill="var(--accent3)" opacity="0.6" font-family="monospace">  arr.sort()</text><text x="12" y="46" font-size="7.5" fill="var(--accent3)" opacity="0.4" font-family="monospace">  return arr</text></svg>
+      </div>
+      <div class="project-info">
+        <div class="project-category-badge programming">Programming</div>
+        <h3>Inventory Management System</h3>
+        <p>Inventory Management System - Menu-driven interface with real world invetory management options.</p>
+        <div class="project-tech"><span>C Language</span><span>File Handling</span><span>Menu-Driven Interface</span><span>Arrays</span></div>
+        <a href="https://www.linkedin.com/posts/muhammad-mutahhar-khan-562070378_%F0%9D%90%8F%F0%9D%90%AB%F0%9D%90%A8%F0%9D%90%A3%F0%9D%90%9E%F0%9D%90%9C%F0%9D%90%AD-%F0%9D%90%92%F0%9D%90%A1%F0%9D%90%A8%F0%9D%90%B0%F0%9D%90%9C%F0%9D%90%9A%F0%9D%90%AC%F0%9D%90%9E-%F0%9D%90%88%F0%9D%90%A7%F0%9D%90%AF%F0%9D%90%9E-activity-7409249395856281601-_-20?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF1E-hoBqhdV_WFdT117IOENh-ECgNig0Rs" class="project-link" target="_blank">View Project →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="section-header reveal">
+      <!-- <span class="section-tag">// 04</span> -->
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-info reveal">
+        <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of something amazing.</p>
+        <div class="contact-cards">
+          <a href="mailto:your.email@example.com" class="contact-card">
+            <div class="contact-card-icon email-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">mutahhar.k1207@gmail.com</span>
+            </div>
+            <span class="contact-card-arrow">→</span>
+          </a>
+          <a href="https://www.linkedin.com/in/muhammad-mutahhar-khan-562070378/" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon linkedin-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">LinkedIn</span>
+              <span class="contact-card-value">Muhammad Mutahhar Khan - Watch all posts and Certificates</span>
+            </div>
+            <span class="contact-card-arrow">→</span>
+          </a>
+          <!-- <a href="https://github.com/mutahhar-official" target="_blank" rel="noopener noreferrer" class="contact-card">
+            <div class="contact-card-icon github-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            </div>
+            <div class="contact-card-text">
+              <span class="contact-card-label">GitHub</span>
+              <span class="contact-card-value">github.com/mutahhar-official</span>
+            </div>
+            <span class="contact-card-arrow">→</span>
+          </a> -->
+          <a href="https://www.facebook.com/muhammad.mutahhar.khan.2025" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon facebook-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </div>
+          <div class="contact-card-text">
+            <span class="contact-card-label">Facebook</span>
+            <span class="contact-card-value">Muhammad Mutahhar Khan</span>
+          </div>
+          <span class="contact-card-arrow">→</span>
+          </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">MMK</span>
+        <span class="logo-bracket">/&gt;</span>
+      </div>
+      <p class="footer-copy">© 2025 · Mutahhar-Official.</p>
+      <a href="#hero" class="back-to-top">↑ Top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
