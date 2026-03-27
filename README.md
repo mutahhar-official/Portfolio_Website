@@ -52,15 +52,14 @@ The portfolio showcases my skills, projects, resume, and contact information in 
 - Implemented smooth scrolling
 - Added animation effects for better UI/UX
 - Ensured responsive layout across devices
-- Integrated external links (LinkedIn, Email)
+- Integrated external links (LinkedIn, Email, Github, Facebook)
 - Enhanced project interactivity
 
 ---
 
 ## 🌍 Live Demo
 
-🔗 Live Website:  https://mutahhar-official.github.io/CodeAlpha_Potfolio_Frontend/
-
+🔗 Live Website:   https://mutahhar-official.github.io/Portfolio_Website/
 ---
 
 ## 🏆 Internship Credit
@@ -71,4 +70,4 @@ This project was completed as **Task 2** during my Frontend Development Internsh
 ## 👨‍💻 Author
 
 Muhammad Mutahhar Khan  
-Frontend Developer Intern at CodeAlpha
+Frontend Developer
