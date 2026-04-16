@@ -988,3 +988,180 @@ strong { color: var(--accent); }
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* ===== GLOBAL MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  /* ── Prevent any horizontal scroll ── */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ── All sections fit screen ── */
+  section {
+    padding: 3rem 1.2rem;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* ── Any grid becomes single column ── */
+  .skills-grid,
+  .projects-grid,
+  .contact-cards,
+  .about-grid,
+  .exp-cards {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  /* ── All cards full width ── */
+  .skill-card,
+  .project-card,
+  .contact-card,
+  .exp-card {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  /* ── Hero section ── */
+  .hero {
+    padding: 2rem 1.2rem;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .hero-tagline,
+  .hero-greeting {
+    font-size: 0.85rem;
+    padding: 0 0.5rem;
+  }
+
+  .hero-roles {
+    font-size: 0.85rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* ── Buttons ── */
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-cta a,
+  .hero-cta button,
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  /* ── Photo ── */
+  .hero-photo-wrapper {
+    width: 160px !important;
+    height: 160px !important;
+    margin: 1rem auto;
+  }
+
+  .photo-placeholder {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  /* ── Stats row ── */
+  .hero-stats {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  /* ── About section ── */
+  .about-grid,
+  .about-content,
+  .about-wrapper {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  /* ── Skills section ── */
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .skill-card {
+    width: 100% !important;
+  }
+
+  /* ── Projects section ── */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-card {
+    width: 100% !important;
+  }
+
+  .projects-filter {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* ── Marquee ── */
+  .marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* ── Contact section ── */
+  .contact-cards {
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  /* ── Section titles ── */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* ── Fix any image going out of bounds ── */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
