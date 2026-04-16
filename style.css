@@ -1013,9 +1013,13 @@ strong { color: var(--accent); }
   /* ── Any grid becomes single column ── */
   .skills-grid,
   .projects-grid,
-  .contact-cards,
-  .about-grid,
   .exp-cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-grid,
+  .about-content,
+  .about-wrapper {
     grid-template-columns: 1fr !important;
     flex-direction: column !important;
   }
@@ -1023,7 +1027,6 @@ strong { color: var(--accent); }
   /* ── All cards full width ── */
   .skill-card,
   .project-card,
-  .contact-card,
   .exp-card {
     width: 100% !important;
     min-width: unset !important;
@@ -1087,14 +1090,6 @@ strong { color: var(--accent); }
     width: 100%;
   }
 
-  /* ── About section ── */
-  .about-grid,
-  .about-content,
-  .about-wrapper {
-    grid-template-columns: 1fr !important;
-    flex-direction: column !important;
-  }
-
   /* ── Skills section ── */
   .skills-grid {
     grid-template-columns: 1fr !important;
@@ -1130,29 +1125,6 @@ strong { color: var(--accent); }
     overflow: hidden;
   }
 
-  /* ── Contact section ── */
-  .contact-cards {
-    flex-direction: column !important;
-    width: 100%;
-  }
-
-  .contact-card {
-    width: 100% !important;
-    min-width: unset !important;
-  }
-
-  .contact-wrapper {
-    grid-template-columns: 1fr !important;
-    flex-direction: column !important;
-  }
-
-  /* ── Footer ── */
-  footer {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    font-size: 0.75rem;
-  }
-
   /* ── Section titles ── */
   .section-title {
     font-size: 2rem;
@@ -1162,6 +1134,56 @@ strong { color: var(--accent); }
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  /* ── Footer ── */
+  footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  /* ===== CONTACT SECTION FIX (isolated) ===== */
+
+  .section.contact {
+    padding: 3rem 1.2rem;
+    overflow-x: hidden;
+  }
+
+  .contact-wrapper,
+  .contact-info {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contact-intro {
+    width: 100%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding-right: 1rem;
+  }
+
+  .contact-cards {
+    width: 100%;
+    flex-direction: column !important;
+    padding-right: 1rem;
+  }
+
+  .contact-card {
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .contact-card-value {
+    white-space: normal;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    font-size: 0.78rem;
   }
 
 }
