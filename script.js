@@ -130,10 +130,11 @@ animParticles();
 // ── Typewriter roles ──────────────────────────────
 const roles = [
   'Computer Systems Engineer',
+  'AI Learner',
   'Frontend Developer',
-  'Graphic Designer',
+  'Python Developer',
   'C/C++ Programmer',
-  'UI/UX Designer',
+  'Graphic Designer',
 ];
 let roleIdx = 0, charIdx = 0, deleting = false;
 const roleEl = document.getElementById('roleText');
